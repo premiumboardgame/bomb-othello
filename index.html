@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ボムオセロ</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+    <header>
+      <h1>💣 ボムオセロ</h1>
+      <div id="scoreboard">
+        <div class="score-block" id="score-black">
+          <span class="stone black"></span>
+          <span class="label">あなた</span>
+          <span class="count" id="count-black">2</span>
+        </div>
+        <div id="turn-indicator">黒の番</div>
+        <div class="score-block" id="score-white">
+          <span class="stone white"></span>
+          <span class="label">AI</span>
+          <span class="count" id="count-white">2</span>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div id="board-container">
+        <div id="board"></div>
+      </div>
+      <div id="controls">
+        <button id="bomb-toggle" class="btn-bomb">💣 ボムを置く</button>
+      </div>
+    </main>
+  </div>
+
+  <div id="modal" class="modal hidden">
+    <div class="modal-content">
+      <div id="modal-icon"></div>
+      <h2 id="modal-title"></h2>
+      <p id="modal-reason"></p>
+      <div id="modal-scores"></div>
+      <button id="restart-btn" class="btn-restart">もう一度</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
